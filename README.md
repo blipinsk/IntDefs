@@ -11,8 +11,30 @@ Usage
 Currently there are 3 annotations implemented in the library:
  
  1. `@Visibility`
+    * `View.VISIBLE`
+    * `View.INVISIBLE`
+    * `View.GONE`
+
  2. `@MotionEventAction`
- 3. `@MotionEventAction_Simple` (containing only `MotionEvent.ACTION_DOWN`, `MotionEvent.ACTION_UP`, `MotionEvent.ACTION_MOVE`, `MotionEvent.ACTION_CANCEL`)
+    * `MotionEvent.ACTION_DOWN`
+    * `MotionEvent.ACTION_UP`
+    * `MotionEvent.ACTION_MOVE`
+    * `MotionEvent.ACTION_CANCEL`
+    * `MotionEvent.ACTION_OUTSIDE`
+    * `MotionEvent.ACTION_POINTER_DOWN`
+    * `MotionEvent.ACTION_POINTER_UP`
+    * `MotionEvent.ACTION_HOVER_MOVE` (from `intdefs-v14`)
+    * `MotionEvent.ACTION_SCROLL` (from `intdefs-v14`)
+    * `MotionEvent.ACTION_HOVER_ENTER` (from `intdefs-v14`)
+    * `MotionEvent.ACTION_HOVER_EXIT` (from `intdefs-v14`)
+    * `MotionEvent.ACTION_BUTTON_PRESS` (from `intdefs-v23`)
+    * `MotionEvent.ACTION_BUTTON_RELEASE` (from `intdefs-v23`)
+    
+ 3. `@MotionEventAction_Simple`
+    * `MotionEvent.ACTION_DOWN`
+    * `MotionEvent.ACTION_UP`
+    * `MotionEvent.ACTION_MOVE`
+    * `MotionEvent.ACTION_CANCEL`
  
 Add the annotation to a variable or to the method (result of the method to be exact) to specify the possible values for it.
 
