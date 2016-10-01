@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+def cfg = rootProject.ext.configuration
+def libs = rootProject.ext.libraries
+def bintrayCfg = rootProject.ext.bintrayConfig
+
+android {
+    compileSdkVersion cfg.compileVersion
+    buildToolsVersion cfg.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion cfg.targetSdk
+        versionCode cfg.versionCode
+        versionName cfg.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src/main/java', '../intdefs/src/main/java']
+            }
+        }
+    }
+}
+
+dependencies {
+    provided "com.android.support:appcompat-v7:${libs.support}"
+}
+
+publish {
+    artifactId = bintrayCfg.artifact_v9
+    userOrg = bintrayCfg.userOrg
+    groupId = bintrayCfg.groupId
+    uploadName = bintrayCfg.name
+    publishVersion = cfg.versionName
+    desc = bintrayCfg.description
+    website = bintrayCfg.website
+    licences = bintrayCfg.licences
+}
