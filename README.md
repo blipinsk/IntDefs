@@ -1,6 +1,8 @@
 IntDefs
 =======
-Android constants wrapped in `@IntDef` annotations. Not all of the constants... just the one that would usually be used in `switch` statements. 
+Android constants wrapped in `@IntDef` annotations.
+
+Not all of the constants... just the ones that would usually be used in `switch` statements. 
 
 ![ ](/MotionEventAction.gif)
 
