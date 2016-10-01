@@ -12,7 +12,7 @@ Currently there are 3 annotations implemented in the library:
  
  1. `@Visibility`
  2. `@MotionEventAction`
- 3. `@MotionEventAction_Simple`
+ 3. `@MotionEventAction_Simple` (containing only `MotionEvent.ACTION_DOWN`, `MotionEvent.ACTION_UP`, `MotionEvent.ACTION_MOVE`, `MotionEvent.ACTION_CANCEL`)
  
 Add the annotation to a variable or to the method (result of the method to be exact) to specify the possible values for it.
 
